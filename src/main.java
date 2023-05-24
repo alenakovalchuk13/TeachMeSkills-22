@@ -1,10 +1,15 @@
+import java.util.Scanner;
+
 public class main {
     public static void main (String[] args){
-        System.out.println(getSeason(6));
-        System.out.println(getTimeYear(2));
-        System.out.println(getNumber(7));
-        System.out.println(getTemperature(-20));
-        System.out.println(getColor(8));
+        //System.out.println(getSeason(6));
+        //System.out.println(getTimeYear(2));
+        //System.out.println(getNumber(7));
+        //System.out.println(getTemperature(-20));
+        //System.out.println(getColor(8));
+        //printObbNumber();
+        //printNumber();
+        getSum();
 
     }
     //Conditional operator
@@ -82,7 +87,29 @@ public class main {
                 return "There is no such color in the rainbow";
         }
     }
+    //Loops
+    //Task 1 (Print numbers from 1 to 99 using for)
+     public static void printObbNumber(){
+         for (int count = 1; count <= 99; count++)
+         {if(count%2!=0)
+             System.out.println("Obb numbers: " + count);
+         }
+     }
+     //Task 2 (Print numbers from 5 to 1)
+     public static void printNumber(){
+         for (int count = 5; count >= 1; count--) {
+             System.out.println("Numbers: " + count);
+         }
+    }
+    //Task 3(Get sum of the numbers)
+    public static void getSum(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter positive number: ");
+        int sum =0;
+        int number = scanner.nextInt();
 
-
-    
+        for (int count = 1; count <= number; count++) {
+            sum+=count;}
+            System.out.println("Sum: " + sum);
+    }
 }
