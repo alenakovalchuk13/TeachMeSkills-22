@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class main {
-    public static void main(String[] args) {
+    public static void Main(String[] args) {
         System.out.println(getSeason(6));
         System.out.println(getTimeYear(2));
         System.out.println(getNumber(7));
