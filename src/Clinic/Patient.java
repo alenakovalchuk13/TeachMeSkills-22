@@ -16,9 +16,7 @@ public class Patient {
         } else
             return new Therapist();
     }
-    public String getName() {
-        return name;
-    }
+
 }
 
     
