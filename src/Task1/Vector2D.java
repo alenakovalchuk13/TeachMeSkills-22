@@ -1,4 +1,6 @@
-public class Vector2D implements VectorMethods {
+package Task1;
+
+public class Vector2D {
     private double x;
     private double y;
 
@@ -17,7 +19,7 @@ public class Vector2D implements VectorMethods {
         return y;
     }
 
-    @Override
+
     public double getLength() {
         return Math.sqrt(x * x + y * y);
     }
@@ -46,7 +48,7 @@ public class Vector2D implements VectorMethods {
 
     @Override
     public String toString() {
-        return info + ", coordinates: " + x + y;
+        return info + ", coordinates: " + x + ", " + y;
     }
 }
 

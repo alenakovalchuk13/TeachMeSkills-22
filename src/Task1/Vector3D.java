@@ -1,9 +1,11 @@
-public class Vector3D implements VectorMethods{
+package Task1;
+
+public class Vector3D {
     private double x;
     private double y;
     private double z;
 
-    private final String info = "Это вектор для двумерной системы координат";
+    private final String info = "Это вектор для трехмерной системы координат";
 
     public Vector3D(double x, double y, double z){
         this.x = x;
@@ -23,7 +25,7 @@ public class Vector3D implements VectorMethods{
         return z;
     }
 
-    @Override
+
     public double getLength(){
         return Math.sqrt(x * x + y * y + z * z);
     }
@@ -52,7 +54,7 @@ public class Vector3D implements VectorMethods{
 
     @Override
     public String toString() {
-        return info + ", coordinates: " + x + y + z;
+        return info + ", coordinates: " + x + ", " + y + ", " + z;
     }
 }
 
