@@ -18,9 +18,9 @@ public class Document {
     }
 
     public static void showLettersUpper(String string){
-        StringBuilder stringBuilder = new StringBuilder("Letters:");
+        StringBuilder stringBuilder = new StringBuilder();
         String res = string.substring(5, 8) + "/" + string.substring(14, 17) + "/" + string.substring(19, 20) + "/" + string.substring(21);
-        System.out.println(stringBuilder + res.toUpperCase());
+        System.out.println("Letters: " + stringBuilder + res.toUpperCase());
     }
 
     public static void check(String string) {

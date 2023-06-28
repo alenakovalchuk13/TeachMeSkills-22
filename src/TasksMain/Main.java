@@ -15,8 +15,5 @@ public class Main {
 
         //Task2
         Document.doubleLetter("Hello");
-
-
-
     }
 }
