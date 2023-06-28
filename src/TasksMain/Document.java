@@ -18,9 +18,9 @@ public class Document {
     }
 
     public static void showLettersUpper(String string){
+        StringBuilder stringBuilder = new StringBuilder("Letters:");
         String res = string.substring(5, 8) + "/" + string.substring(14, 17) + "/" + string.substring(19, 20) + "/" + string.substring(21);
-
-        System.out.println("Letters: " + res.toUpperCase());
+        System.out.println(stringBuilder + res.toUpperCase());
     }
 
     public static void check(String string) {
@@ -48,6 +48,12 @@ public class Document {
     }
 
     //Task2
+
+    public static void doubleLetter(String string) {
+        for (int i = 0; i < string.length(); i++) {
+            System.out.print(string.substring(i, i + 1) + string.substring(i, i + 1));
+        }
+    }
 
 }
 
