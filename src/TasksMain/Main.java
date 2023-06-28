@@ -14,7 +14,6 @@ public class Main {
         Document.check1a2b(st);
 
         //Task2
-
         Document.doubleLetter("Hello");
 
 
