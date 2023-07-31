@@ -1,9 +1,14 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class FileHistory implements History{
-    public void writeHistory (Operation operation)  {
+public class FileOperationStorage implements OperationStorage {
+
+    private final List<Operation> operations = new ArrayList<>();
+    @Override
+    public void writeHistory(Operation operation) {
         File file = new File("History");
         FileWriter fileWriter;
         try {
@@ -16,4 +21,11 @@ public class FileHistory implements History{
         }
     }
 
+
+    @Override
+    public List<Operation> findAll() {
+        return new ArrayList<>(operations);
+
+
+    }
 }

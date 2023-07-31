@@ -1,8 +1,11 @@
+import java.time.LocalDate;
+
 public class Operation {
     double num1;
     double num2;
     String type;
     double result;
+    LocalDate createdDate;
 
     public Operation(double num1, double num2, String type, double result) {
         this.num1 = num1;
@@ -40,6 +43,14 @@ public class Operation {
         this.result = result;
     }
 
+    public LocalDate getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
+    }
+
     @Override
     public String toString() {
         return "Operations{" +
@@ -47,7 +58,9 @@ public class Operation {
                 ", num2=" + num2 +
                 ", type='" + type + '\'' +
                 ", result=" + result +
-                '}';
+                ", createdDate=" + createdDate +
+        '}';
+
     }
 }
 
