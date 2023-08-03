@@ -20,7 +20,7 @@ public class NumberList {
 
     public List<Integer> doStream() {
 
-        //Stream<Integer> stream = number.stream();
+
         List<Integer> list = number.stream()
                 .distinct()
                 .filter(i -> i <= 17)
