@@ -4,6 +4,7 @@ public interface OperationStorage {
     void writeHistory (Operation operation);
 
     List<Operation> findAll();
+
 }
 
 

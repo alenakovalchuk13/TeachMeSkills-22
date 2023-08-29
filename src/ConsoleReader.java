@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class ConsoleReader {
     Scanner scanner = new Scanner(System.in);
 
-    public double getNum() {
+    public double readNum() {
         return scanner.nextDouble();
     }
 
-    public String getType() {
+    public String readString() {
         return scanner.next();
 
     }

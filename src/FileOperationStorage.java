@@ -7,6 +7,7 @@ import java.util.List;
 public class FileOperationStorage implements OperationStorage {
 
     private final List<Operation> operations = new ArrayList<>();
+
     @Override
     public void writeHistory(Operation operation) {
         File file = new File("History");
@@ -14,7 +15,6 @@ public class FileOperationStorage implements OperationStorage {
         try {
             fileWriter = new FileWriter(file, true);
             fileWriter.write(operation.toString());
-            fileWriter.write(10);
             fileWriter.close();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
@@ -29,3 +29,4 @@ public class FileOperationStorage implements OperationStorage {
 
     }
 }
+

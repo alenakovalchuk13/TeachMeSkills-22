@@ -8,6 +8,7 @@ public class Calculator {
 
     private static final OperationStorage history = new FileOperationStorage();
 
+
     public  double calculate(double num1, double num2, String type)  {
         switch (type) {
             case "sum":

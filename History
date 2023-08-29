@@ -1,0 +1,2 @@
+Operations{num1=2.0, num2=2.0, type='sum', result=4.0, createdDate=2023-08-24}
+Operations{num1=5.0, num2=8.0, type='sum', result=13.0, createdDate=2023-08-24}Operations{num1=55.0, num2=5.0, type='sum', result=60.0, createdDate=2023-08-24}Operations{num1=5.0, num2=5.0, type='sum', result=10.0, createdDate=2023-08-29}
