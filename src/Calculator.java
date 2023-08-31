@@ -7,7 +7,7 @@ import java.util.List;
 public class Calculator {
     //private static final OperationStorage history = new InMemoryOperationStorage();
     //private static final OperationStorage history = new FileOperationStorage();
-    private final OperationStorage history  = new JdbcOperationStorage();
+    private static final OperationStorage history  = new JdbcOperationStorage();
 
 
     public  double calculate(double num1, double num2, String type) throws SQLException {
@@ -42,7 +42,7 @@ public class Calculator {
     }
 
 
-    public List<String> getHistory() {
+    public static List<String> getHistory() {
         List<Operation> all = history.findAll();
         List<String> result = new ArrayList<>();
         for (Operation operation : all) {
