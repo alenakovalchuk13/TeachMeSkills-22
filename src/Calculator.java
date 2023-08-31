@@ -1,15 +1,16 @@
-import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Calculator {
-
-
+    //private static final OperationStorage history = new InMemoryOperationStorage();
     private static final OperationStorage history = new FileOperationStorage();
+    private final OperationStorage storage = new JdbcOperationStorage();
 
 
-    public  double calculate(double num1, double num2, String type)  {
+    public  double calculate(double num1, double num2, String type) throws SQLException {
         switch (type) {
             case "sum":
                 double v1 =  num1 + num2;
@@ -51,3 +52,4 @@ public class Calculator {
     }
 
 }
+

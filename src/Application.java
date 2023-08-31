@@ -1,8 +1,9 @@
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class Application {
-    Application application;
+
     ConsoleReader consoleReader = new ConsoleReader();
     ConsoleWriter consoleWriter = new ConsoleWriter();
 
@@ -10,7 +11,7 @@ public class Application {
 
 
 
-    public void start() {
+    public void start() throws SQLException {
         boolean check = true;
         int action;
 
@@ -24,22 +25,20 @@ public class Application {
                     if (user == null) {
                         consoleWriter.writeMessage("There is no such user. Try one more time.");
                     } else {
-                        inputDate();
+                        enterData();
                         check = false;
                     }
                     break;
                 case 2:
                     userService.register();
-                    inputDate();
+                    enterData();
                     break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + action);
             }
         }
     }
 
 
-    public void inputDate() {
+    public void enterData() throws SQLException {
         while (true) {
             consoleWriter.writeMessage("Enter num1: ");
             double num1 = consoleReader.readNum();
@@ -71,3 +70,5 @@ public class Application {
         }
     }
 }
+
+

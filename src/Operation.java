@@ -59,7 +59,7 @@ public class Operation {
                 ", type='" + type + '\'' +
                 ", result=" + result +
                 ", createdDate=" + createdDate +
-        '}';
+                '}';
 
     }
 }

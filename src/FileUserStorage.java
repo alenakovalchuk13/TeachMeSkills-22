@@ -2,20 +2,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
-public class FileUserStorage {
 
-    public ArrayList<User> getUsers() {
-        return users;
-    }
+public class FileUserStorage implements UserStorage{
+    private final List<User> users = new ArrayList<>();
 
-    public void setUsers(ArrayList<User> users) {
-        this.users = users;
-    }
-
-    ArrayList<User> users = new ArrayList<>();
-
-    public void findAllUsers (){
+    @Override
+    public void writeUsers(User user) {
         File file = new File("Users");
         FileWriter fileWriter;
         try {
@@ -23,12 +17,14 @@ public class FileUserStorage {
             fileWriter.write(users.toString());
             fileWriter.close();
         } catch (IOException ex) {
-            throw new RuntimeException(ex);
+            ex.printStackTrace();
         }
-    }
-
 
     }
+}
+
+
+
 
 
 

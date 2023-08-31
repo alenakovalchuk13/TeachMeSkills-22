@@ -1,3 +1,3 @@
-public interface ValidService {
+public interface Valid {
     boolean valid (String string);
 }

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileOperationStorage implements OperationStorage {
-
     private final List<Operation> operations = new ArrayList<>();
 
     @Override
@@ -15,6 +14,7 @@ public class FileOperationStorage implements OperationStorage {
         try {
             fileWriter = new FileWriter(file, true);
             fileWriter.write(operation.toString());
+            fileWriter.write(10);
             fileWriter.close();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
@@ -25,8 +25,7 @@ public class FileOperationStorage implements OperationStorage {
     @Override
     public List<Operation> findAll() {
         return new ArrayList<>(operations);
-
-
     }
 }
+
 
