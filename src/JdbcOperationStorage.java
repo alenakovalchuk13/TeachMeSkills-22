@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JdbcOperationStorage implements OperationStorage {
-    private List<Operation> operationsStorage = new ArrayList<>();
+
 
     @Override
     public void writeHistory(Operation operation) throws SQLException {
@@ -14,7 +14,7 @@ public class JdbcOperationStorage implements OperationStorage {
             Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres",
                     "postgres", "Root");
 
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into calculator values  (?,?,?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into operations (num1, num2, type, result) values  (?,?,?,?)");
             preparedStatement.setDouble(1, operation.getNum1());
             preparedStatement.setDouble(2, operation.getNum2());
             preparedStatement.setString(3, operation.getType());
@@ -24,7 +24,7 @@ public class JdbcOperationStorage implements OperationStorage {
             preparedStatement.close();
 
         } catch (SQLException e) {
-            e.getStackTrace();
+            e.printStackTrace();
         }
 
     }

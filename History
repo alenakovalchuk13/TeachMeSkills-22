@@ -1,2 +1,9 @@
-Operations{num1=2.0, num2=2.0, type='sum', result=4.0, createdDate=2023-08-24}
-Operations{num1=5.0, num2=8.0, type='sum', result=13.0, createdDate=2023-08-24}Operations{num1=55.0, num2=5.0, type='sum', result=60.0, createdDate=2023-08-24}Operations{num1=5.0, num2=5.0, type='sum', result=10.0, createdDate=2023-08-29}
+Operations{num1=80.0, num2=80.0, type='sum', result=160.0, createdDate=2023-08-31}
+Operations{num1=55.0, num2=10.0, type='sum', result=65.0, createdDate=2023-08-31}
+Operations{num1=78.0, num2=14.0, type='sum', result=92.0, createdDate=2023-08-31}
+Operations{num1=87.8, num2=23.8, type='mul', result=2089.64, createdDate=2023-08-31}
+Operations{num1=54.5, num2=10.1, type='sum', result=64.6, createdDate=2023-08-31}
+Operations{num1=54.8, num2=10.5, type='sum', result=65.3, createdDate=2023-08-31}
+Operations{num1=54.1, num2=10.5, type='sum', result=64.6, createdDate=2023-08-31}
+Operations{num1=8.5, num2=125.4, type='sum', result=133.9, createdDate=2023-08-31}
+Operations{num1=54.87, num2=98.87, type='sum', result=153.74, createdDate=2023-08-31}
