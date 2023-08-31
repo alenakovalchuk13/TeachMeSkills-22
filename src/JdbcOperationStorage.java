@@ -33,7 +33,7 @@ public class JdbcOperationStorage implements OperationStorage {
     @Override
     public List<Operation> findAll() {
 
-       return new ArrayList<>();
+       return operations;
     }
 }
 

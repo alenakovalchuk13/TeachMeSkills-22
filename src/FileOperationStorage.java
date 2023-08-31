@@ -24,7 +24,8 @@ public class FileOperationStorage implements OperationStorage {
 
     @Override
     public List<Operation> findAll() {
-        return new ArrayList<>(operations);
+
+        return operations;
     }
 }
 
