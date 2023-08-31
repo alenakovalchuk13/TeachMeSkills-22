@@ -9,7 +9,7 @@ public class JdbcOperationStorage implements OperationStorage {
 
 
     @Override
-    public void writeHistory(Operation operation) throws SQLException {
+    public void writeHistory(Operation operation)  {
         try {
             Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres",
                     "postgres", "Root");
